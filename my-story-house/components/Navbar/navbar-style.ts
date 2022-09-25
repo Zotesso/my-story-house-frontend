@@ -4,6 +4,7 @@ const NavbarWrapper = styled.nav`
   width: 100%;
   height: 70px;
   display: flex;
+  justify-content: space-around;
   flex-direction: row;
   align-items: center;
   background-color: #D9D9D9;
