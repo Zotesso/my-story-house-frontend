@@ -24,3 +24,15 @@ a {
     background: black;
   }
 }
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.mr-auto {
+  margin-right: auto;
+}
+
+.primary-text {
+  color: #973342;
+}
