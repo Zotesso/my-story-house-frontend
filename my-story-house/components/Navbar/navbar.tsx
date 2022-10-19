@@ -3,12 +3,19 @@ import PrimaryButton from "../Button/primary-button-style"
 import NavbarWrapper from "./navbar-style"
 import Image from 'next/image'
 import styles from './navbar.module.css';
+import BookService from "../../lib/services/Book.service";
 
 function Navbar() {
+  const handleLikeBook = () => {
+    const bookService = new BookService();
+    const result = bookService.likeBook(4);
+    console.log('resultado', result);
+  }
+
   return (
     <>
       <NavbarWrapper>
-        <PrimaryButton className="ml-auto" icon="">Explorar</PrimaryButton>
+        <PrimaryButton onClick={handleLikeBook} className="ml-auto" icon="">Explorar</PrimaryButton>
         <input className={styles.navbarSearch} type="text" placeholder="Procurar..." />
         <PrimaryButton icon="/assets/feather.svg">Upload</PrimaryButton>
 
